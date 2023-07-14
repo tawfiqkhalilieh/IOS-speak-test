@@ -116,13 +116,17 @@ async function openai_test() {
       body: JSON.stringify(data),
     });
     if (response.ok) {
+      if (!flag) {
+        speak();
+        flag = true;
+      }
       const responseData = await response.json();
       const message = responseData.choices[0].message.content;
       conversationAssistantAdd(message);
       
       // const utterance = new SpeechSynthesisUtterance(message)
       // speechSynthesis.speak('');
-        if (!flag) { speak(); flag=true;}
+        // if (!flag) { speak(); flag=true;}
        setTimeout(() => playByText("en-US", message), 300)
       return(message);
     }
