@@ -6,8 +6,11 @@
     <p>Looper World!</p>
   </body>
   <script>
-    const msg = new SpeechSynthesisUtterance('Hello World');
+    const msg = new SpeechSynthesisUtterance('Hello Loopers');
+    
     window.speechSynthesis.speak(msg);
-
+    window.speechSynthesis.pause();
+    window.speechSynthesis.resume();
+    window.speechSynthesis.speak(msg);
   </script>
 </html>
