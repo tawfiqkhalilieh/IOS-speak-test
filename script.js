@@ -122,7 +122,7 @@ async function openai_test() {
       
       // const utterance = new SpeechSynthesisUtterance(message)
       // speechSynthesis.speak('');
-        if (!flag) { speak() }
+        if (!flag) { speak(); flag=true;}
        setTimeout(() => playByText("en-US", message), 300)
       return(message);
     }
