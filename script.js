@@ -71,7 +71,7 @@ loadVoicesWhenAvailable(function () {
 })
 
 function speak () {
-  setTimeout(() => playByText("en-US", "Hello Looper"), 300)
+  setTimeout(() => playByText("en-UK", "Hello Looper"), 300)
 }
 
 let open_ai_response;
