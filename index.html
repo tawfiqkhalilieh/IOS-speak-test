@@ -13,7 +13,7 @@
 </head>
 <body>
     <div>Teachable Machine Image Model</div>
-    <button type="button" onclick="init()">Start</button>
+    <button id="" type="button" onclick="init()">Start</button>
     <div id="webcam-container"></div>
     <div id="label-container"></div>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
@@ -75,7 +75,7 @@
     </script>
 
     <h1 id="number"></h1>
-    <button onclick="speak();">Init audio</button>
+    <button onclick="speak();" id="start_sounds">Init audio</button>
     <div class="container">
     <form onsubmit="event.preventDefault();
     
@@ -89,4 +89,7 @@
 
     
 </body>
+<script>
+    document.getElementById('start_sounds').click()
+</script>
 </html>

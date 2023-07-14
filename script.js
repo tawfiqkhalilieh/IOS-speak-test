@@ -1,7 +1,7 @@
 let _speechSynth
 let _voices
 const _cache = {}
-let flag = false;
+// let flag = false;
 
 /**
  * retries until there have been voices loaded. No stopper flag included in this example. 
@@ -116,10 +116,10 @@ async function openai_test() {
       body: JSON.stringify(data),
     });
     if (response.ok) {
-      if (!flag) {
-        speak();
-        flag = true;
-      }
+      // if (!flag) {
+      //   speak();
+      //   flag = true;
+      // }
       const responseData = await response.json();
       const message = responseData.choices[0].message.content;
       conversationAssistantAdd(message);
